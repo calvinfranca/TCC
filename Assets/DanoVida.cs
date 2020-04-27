@@ -9,19 +9,23 @@ public class DanoVida : MonoBehaviour
 {
     // Start is called before the first frame update
     public int dano;
-    public int vida;
-    public GameObject painel;    
-    public Text textoDano;
+    public int vidamaxima;
+    public int vidaatual;
+
+    public BarraVida barravida;
+
+
 
     void Start()
     {
-        painel.SetActive(true);
+        vidaatual = vidamaxima;
+        barravida.VidaMaxima(vidamaxima);
     }
 
     // Update is called once per frame
     void Update()
     {
-        textoDano.text = Convert.ToString(vida);
+        
         
     }
 
@@ -34,6 +38,7 @@ public class DanoVida : MonoBehaviour
     }
     public void Dano(int xDmg)
     {
-        vida = vida - dano;
+        vidaatual -= xDmg;
+        barravida.SetVida(vidaatual);
     }
 }   

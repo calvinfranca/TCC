@@ -62,6 +62,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BarraVida.cs" />
+    <Compile Include="Assets\Billboard.cs" />
     <Compile Include="Assets\Controle.cs" />
     <Compile Include="Assets\DanoVida.cs" />
     <Compile Include="Assets\Dialogo.cs" />
